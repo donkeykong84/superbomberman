@@ -59,3 +59,24 @@ Build by running <code>make</code> or <code>make CONFIG=x</code>, where x is us,
 
 # Legal note
 I am not a copyright owner of Super Bomberman, and this repository is provided for education proposes only. Any non-educational use of this repository might be illegal if you do not legally own a copy of the game.
+
+# Running the Program for Preview
+
+To run the program for preview, follow these steps:
+
+1. **Build the ROM**:
+   - Ensure you have all the required tools and dependencies installed as mentioned in the "Requirements" section.
+   - Open a terminal and navigate to the root directory of the repository.
+   - Run the following command to build the ROM:
+     ```
+     make
+     ```
+   - This will generate a ROM file named `rom.sfc` in the root directory.
+
+2. **Run the ROM using an SNES emulator**:
+   - Download and install an SNES emulator suitable for your operating system. Here are some recommended SNES emulators:
+     - **Windows**: [SNES9x](https://www.snes9x.com/)
+     - **macOS**: [OpenEmu](http://openemu.org/)
+     - **Linux**: [Higan](https://higan.dev/)
+     - **Multi-platform**: [RetroArch](https://www.retroarch.com/)
+   - Open the SNES emulator and load the `rom.sfc` file to run the program for preview.
