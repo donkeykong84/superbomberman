@@ -57,5 +57,51 @@ Build by running <code>make</code> or <code>make CONFIG=x</code>, where x is us,
 * unknown.png. I have no clue what that thing is.
 * Probably more things I forgot. :)
 
+# Using the Development Container
+
+This project includes a development container configuration to help you set up a consistent development environment. The development container is based on a Docker image that includes all the necessary tools and dependencies for building the ROM.
+
+## Prerequisites
+
+Before you can use the development container, you need to have the following installed on your system:
+
+* Docker: [Install Docker](https://docs.docker.com/get-docker/)
+* Visual Studio Code: [Install Visual Studio Code](https://code.visualstudio.com/)
+* Remote - Containers extension for Visual Studio Code: [Install the extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+
+## Setting Up the Development Container
+
+1. Open the project in Visual Studio Code.
+2. Press `F1` to open the command palette, then type `Remote-Containers: Open Folder in Container...` and select it.
+3. Choose the folder containing the project.
+
+Visual Studio Code will build the development container and open the project inside the container. This may take a few minutes the first time you do it.
+
+## Using the Development Container
+
+Once the development container is set up, you can use it to build the ROM and run other development tasks. The development container includes the following tools:
+
+* ca65 and ld65 (from the cc65 package)
+* md5sum
+* python
+
+You can run the usual build commands inside the development container's terminal. For example, to build the ROM, run:
+
+```sh
+make
+```
+
+You can also specify a configuration file:
+
+```sh
+make CONFIG=us
+```
+
+## Additional Tips
+
+* If you need to install additional tools or dependencies, you can modify the `.devcontainer/Dockerfile` and rebuild the development container.
+* You can customize the development container settings by editing the `.devcontainer/devcontainer.json` file.
+* For more information on using development containers with Visual Studio Code, see the [official documentation](https://code.visualstudio.com/docs/remote/containers).
+
 # Legal note
 I am not a copyright owner of Super Bomberman, and this repository is provided for education proposes only. Any non-educational use of this repository might be illegal if you do not legally own a copy of the game.
